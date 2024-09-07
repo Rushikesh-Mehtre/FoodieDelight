@@ -1,0 +1,95 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 450px; // Maximum width for the modal
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #333;
+    }
+
+    form {
+        width: 100%;
+
+        input {
+            display: block;
+            width: 100%; // Input fields take up 90% of the modal width
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            outline: none;
+
+            &:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Add a blue shadow on focus
+            }
+        }
+    }
+
+
+    button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 10px 5px; // Add space between buttons
+        width: 45%; // Buttons take 45% width to align side by side
+        color: white;
+
+        &:first-of-type {
+            background-color: #28a745; // Save button color (green)
+        }
+
+        &:last-of-type {
+            background-color: #dc3545; // Close button color (red)
+        }
+    }
+
+    .button-group {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; // Keep buttons in the same row with space between them
+        margin-top: 20px;
+    }
+
+    // Responsive styles
+    @media (max-width: 480px) {
+        &__content {
+            width: 80%;
+            max-width: 300px;
+        }
+
+        form input {
+            font-size: 0.9rem;
+        }
+
+        button {
+            font-size: 0.9rem;
+            width: 48%; // Adjust button width for smaller screens
+        }
+    }
+}
