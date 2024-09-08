@@ -11,6 +11,7 @@ import AlertBar from './components/AlertBar/AlertBar';
 
 function App() {
   const isAuthenticated = useSelector((state: RootState) => state.auth.isLoggedIn);
+  console.log("into app")
 
   return (
     <>
