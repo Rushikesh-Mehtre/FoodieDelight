@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+
   };
 
   return (

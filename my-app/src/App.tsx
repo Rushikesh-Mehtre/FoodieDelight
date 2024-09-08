@@ -6,6 +6,7 @@ import Login from './pages/Login/Login';
 import { useSelector } from 'react-redux';
 import { RootState } from './redux/store';
 import Navbar from './components/Navbar/Navbar';
+import AlertBar from './components/AlertBar/AlertBar';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
   return (
     <>
    {isAuthenticated && <Navbar/>}
+   <AlertBar /> {/* Include the AlertBar component */}
+
     <Router>
     <Routes>
       {/* Public Route: Login */}

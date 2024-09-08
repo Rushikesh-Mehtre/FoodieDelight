@@ -14,6 +14,7 @@ import {
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 import authReducer from './Slices/authSlice';
 import restaurantReducer from './Slices/restaurantSlice';
+import alertReducer from './Slices/alertSlice';
 
 const persistConfig = {
   key: 'root',
@@ -23,6 +24,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   auth: authReducer,
   restaurant: restaurantReducer,
+  alert: alertReducer,
 
 });
 

@@ -1,12 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // src/components/Login.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {login} from "../../redux/Slices/authSlice";
 import './Login.scss';
+import { showAlert } from '../../redux/Slices/alertSlice';
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin@foodiedelight.com');
+  const [password, setPassword] = useState('admin123');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const dispatch = useDispatch();
@@ -43,18 +45,23 @@ const Login: React.FC = () => {
       // Mocking login API request
       if (email === 'admin@foodiedelight.com' && password === 'admin123') {
         dispatch(login());
-        console.log('Login successful!');
+        dispatch(showAlert({ message: 'Logged in successfully!', type: 'success' }));
       } else {
-        console.log("login failure")
-        // dispatch(loginFailure('Invalid email or password'));
+        dispatch(showAlert({ message: 'Invalid email or password', type: 'error' })); 
       }
     }
   };
+  useEffect(()=>{
+    dispatch(showAlert({ message: 'Email - admin@foodiedelight.com  | password - admin123', type: 'success' })); 
+  },[])
 
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <div className='header'>
+        <p className='heading'>FOODIEDELIGHT</p>
+        <p className='subheading'>Login to continue</p>
+        </div>
 
         <div className="form-group">
           <label>Email:</label>

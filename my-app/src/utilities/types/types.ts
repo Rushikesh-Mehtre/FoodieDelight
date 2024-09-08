@@ -5,5 +5,9 @@ export interface Restaurant {
     rating: number;
     location: string;
     category: string;
+    description: string;
+    contactNumber:number;
+    deliveryArea:string;
+    emailId:string
   }
   

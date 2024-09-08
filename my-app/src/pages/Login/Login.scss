@@ -14,11 +14,20 @@
         max-width: 400px; // Set max-width for responsiveness
         box-sizing: border-box;
 
-        h2 {
-            text-align: center;
+        .header {
+
             margin-bottom: 20px;
-            font-size: 2rem;
-            color: #333;
+
+            .heading {
+                font-size: 2rem;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .subheading {
+                font-size: 1.2rem;
+                margin: 0;
+            }
         }
 
         .form-group {

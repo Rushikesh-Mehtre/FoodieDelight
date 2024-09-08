@@ -1,16 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Restaurant } from '../../utilities/types/types';
+import restaurants from '../../utilities/constants/restaurants';
 
 interface RestaurantState {
   restaurants: Restaurant[];
 }
+const initialRestaurants = restaurants;
 
 const initialState: RestaurantState = {
-  restaurants: [
-    { id: 1, name: 'Pizza Hut', rating: 4.5, location: 'New York', category: 'Fast Food' },
-    { id: 2, name: 'Sushi Place', rating: 4.8, location: 'San Francisco', category: 'Japanese' },
-    { id: 3, name: 'Burger King', rating: 4.0, location: 'Los Angeles', category: 'Fast Food' },
-  ],
+  restaurants: initialRestaurants,
 };
 
 const restaurantSlice = createSlice({
@@ -27,7 +25,7 @@ const restaurantSlice = createSlice({
       state.restaurants = state.restaurants.filter(restaurant => restaurant.id !== action.payload);
     },
     addRestaurant: (state, action: PayloadAction<Restaurant>) => {
-      state.restaurants.push(action.payload);  // Add the new restaurant to the list
+      state.restaurants.unshift(action.payload);  // Add the new restaurant to the list
     },
   },
 });
