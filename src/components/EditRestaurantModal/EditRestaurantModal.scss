@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
         padding: 20px;
         border-radius: 10px;
         width: 100%;
-        max-width: 450px; // Maximum width for the modal
+        max-width: 450px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         display: flex;
         flex-direction: column;
@@ -41,7 +41,7 @@
         input,
         textarea {
             display: block;
-            width: 100%; // Input fields take up 90% of the modal width
+            width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -51,7 +51,7 @@
 
             &:focus {
                 border-color: #007bff;
-                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Add a blue shadow on focus
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
             }
         }
 
@@ -62,14 +62,12 @@
             display: block;
         }
 
-        /* For WebKit browsers (Chrome, Safari, Edge) */
         input[type='number']::-webkit-outer-spin-button,
         input[type='number']::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
 
-        /* For Firefox */
         input[type='number'] {
             -moz-appearance: textfield;
         }
@@ -82,27 +80,26 @@
         border: none;
         cursor: pointer;
         font-size: 1rem;
-        margin: 10px 5px; // Add space between buttons
-        width: 45%; // Buttons take 45% width to align side by side
+        margin: 10px 5px;
+        width: 45%;
         color: white;
 
         &:first-of-type {
-            background-color: #28a745; // Save button color (green)
+            background-color: #28a745;
         }
 
         &:last-of-type {
-            background-color: #dc3545; // Close button color (red)
+            background-color: #dc3545;
         }
     }
 
     .button-group {
         width: 100%;
         display: flex;
-        justify-content: space-between; // Keep buttons in the same row with space between them
+        justify-content: space-between;
         margin-top: 20px;
     }
 
-    // Responsive styles
     @media (max-width: 480px) {
         &__content {
             width: 80%;
@@ -115,7 +112,7 @@
 
         button {
             font-size: 0.9rem;
-            width: 48%; // Adjust button width for smaller screens
+            width: 48%;
         }
     }
 }

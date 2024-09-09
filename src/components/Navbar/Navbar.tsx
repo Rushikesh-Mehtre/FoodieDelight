@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 import React from 'react';
 import './Navbar.scss';
 import { useDispatch } from 'react-redux';
@@ -9,12 +8,10 @@ const Navbar: React.FC = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-
   };
 
   return (
     <>
-      {/* Navbar */}
       <nav className="navbar">
         <div className="navbar__logo">
           <h3>FOODIEDELIGHT</h3>

@@ -1,4 +1,3 @@
-// src/redux/slices/authSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define the initial state type

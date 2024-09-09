@@ -11,14 +11,14 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage';
 import authReducer from './Slices/authSlice';
 import restaurantReducer from './Slices/restaurantSlice';
 import alertReducer from './Slices/alertSlice';
 
 const persistConfig = {
   key: 'root',
-  storage, // This uses localStorage by default. Use sessionStorage if needed
+  storage, 
 };
 
 const rootReducer = combineReducers({
@@ -44,3 +44,6 @@ export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+
+
+
