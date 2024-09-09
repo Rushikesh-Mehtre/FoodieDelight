@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; // Vertically centers the form
+    height: 100vh;
     background-color: #f5f5f5;
 
     .login-form {
@@ -11,11 +11,10 @@
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
-        max-width: 400px; // Set max-width for responsiveness
+        max-width: 400px;
         box-sizing: border-box;
 
         .header {
-
             margin-bottom: 20px;
 
             .heading {
@@ -50,11 +49,11 @@
 
                 &:focus {
                     border-color: #007bff;
-                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); // Blue glow on focus
+                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
                 }
 
                 &.error {
-                    border-color: #dc3545; // Red border for error state
+                    border-color: #dc3545;
                 }
             }
 
@@ -66,7 +65,7 @@
         }
 
         .login-btn {
-            width: 100%; // Ensure button is equal width as input fields
+            width: 100%;
             padding: 12px;
             font-size: 1rem;
             color: white;
@@ -82,7 +81,6 @@
         }
     }
 
-    // Responsive styling
     @media (max-width: 480px) {
         .login-form {
             padding: 20px;

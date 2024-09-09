@@ -1,4 +1,3 @@
-// src/components/AlertBar/AlertBar.tsx
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../redux/store';
@@ -13,9 +12,8 @@ const AlertBar: React.FC = () => {
     if (alert.isVisible) {
       const timer = setTimeout(() => {
         dispatch(hideAlert());
-      }, 3000); // Auto-close after 3 seconds
-
-      return () => clearTimeout(timer); // Clear the timeout if the component unmounts or if alert changes
+      }, 3000);
+      return () => clearTimeout(timer); 
     }
   }, [alert.isVisible, dispatch]);
 

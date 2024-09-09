@@ -1,4 +1,3 @@
-// src/redux/Slices/alertSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AlertState {
